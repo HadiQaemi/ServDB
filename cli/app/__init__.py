@@ -24,8 +24,10 @@ def create_app(config_name="development"):
 
     # Register blueprints
     from .EndPoints.database import database_bp
+    from .EndPoints.metadata import metadata_bp
 
     app.register_blueprint(database_bp, url_prefix="/api/database")
+    app.register_blueprint(metadata_bp, url_prefix="/api/metadata")
 
     return app
 
