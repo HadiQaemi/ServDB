@@ -1,0 +1,89 @@
+#widget-container h2 {
+    color: var(--theia-ui-font-color1);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#widget-container{
+    padding: 5px 15px;
+}
+#widget_desc{
+    padding: 10px 50px;
+}
+
+#widget_desc h2{
+    border-bottom: 2px solid #555;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: var(--theia-activityBar-background);
+    color: var(--theia-titleBar-activeForeground) !important;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    color: var(--theia-charts-lines);
+    outline: none;
+    cursor: pointer;
+    padding: 12px 14px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: var(--theia-widget-shadow);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: var(--theia-widget-shadow);
+}
+.tab button.first {
+    background-color: var(--theia-widget-shadow);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    color: var(--theia-charts-lines);
+    width: 100%;
+}
+
+.tabcontent.first {
+    display: inline-block;
+}
+
+.btn.btn-submit{
+    margin: 10px 2px 0px;
+}
+
+.repository{
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #000;
+    margin: 20px;
+    width: 95%;
+}
+.repository th{
+    padding: 5px 10px;
+    background: #555;
+    color: #ccc;
+    border: 1px solid #555;
+}
+.repository td{
+    padding: 5px 10px;
+    background: #000;
+    color: #f0e1e1;
+    border-bottom: 1px solid #555;
+}
+.download-link{
+    margin-left: 20px;
+}
