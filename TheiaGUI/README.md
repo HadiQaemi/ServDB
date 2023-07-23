@@ -1,9 +1,37 @@
-# datasetb
-The example of how to build the Theia-based applications with the datasetb.
+# Theia Interface
+In ServDB, many tasks are required to run in the background independently of the user interface (UI). AI Models are one of these tasks that must serve requests in real time and return results. Theia interface is used for GUI, which is an online IDE
+that have brought benefits like browser-based accessibility and convenient deployment workspaces. 
 
+
+## Datasetb Reactjs
+Reactjs, Node16, docker
+
+The example of how to build the Theia-based applications with the dataset.
 ## Getting started
 
 Please install all necessary [prerequisites](https://github.com/eclipse-theia/theia/blob/master/doc/Developing.md#prerequisites).
+
+## Start environment
+To start a Docker environment, you must install [Docker](https://www.docker.com/get-started) and type the following command in the terminal:
+```sh
+docker image build --pull --file "Dockerfile" --tag "servdb_theia" "."
+```
+After creating the image "servdb_theia", you will need to use the following steps to run the container:
+```sh
+docker run -d -p 3000:3000 servdb_theia
+```
+Upon completion, you can open your browser and navigate to http://localhost:3000 to see how your app works!
+
+For pulling images on the server run the following commands:
+```sh
+docker pull hadiqaemi/servdb_theia:latest
+```
+
+## build project
+In your favorite terminal, run the following command to make a build from the project:
+```sh
+npm run build 
+```
 
 ## Running the browser example
 
@@ -18,71 +46,6 @@ Please install all necessary [prerequisites](https://github.com/eclipse-theia/th
 *or:* launch `Start Browser Backend` configuration from VS code.
 
 Open http://localhost:3000 in the browser.
-
-## Running the Electron example
-
-    yarn start:electron
-
-*or:*
-
-    yarn rebuild:electron
-    cd electron-app
-    yarn start
-
-*or:* launch `Start Electron Backend` configuration from VS code.
-
-
-## Running the tests
-
-    yarn test
-
-*or* run the tests of a specific package with
-
-    cd datasetb
-    yarn test
-
-
-## Developing with the browser example
-
-Start watching all packages, including `browser-app`, of your application with
-
-    yarn watch
-
-*or* watch only specific packages with
-
-    cd datasetb
-    yarn watch
-
-and the browser example.
-
-    cd browser-app
-    yarn watch
-
-Run the example as [described above](#Running-the-browser-example)
-## Developing with the Electron example
-
-Start watching all packages, including `electron-app`, of your application with
-
-    yarn watch
-
-*or* watch only specific packages with
-
-    cd datasetb
-    yarn watch
-
-and the Electron example.
-
-    cd electron-app
-    yarn watch
-
-Run the example as [described above](#Running-the-Electron-example)
-
-## Publishing datasetb
-
-Create a npm user and login to the npm registry, [more on npm publishing](https://docs.npmjs.com/getting-started/publishing-npm-packages).
-
-    npm login
-
-Publish packages with lerna to update versions properly across local packages, [more on publishing with lerna](https://github.com/lerna/lerna#publish).
-
-    npx lerna publish
+## Running the browser example
+Once you've installed and set up the system, it's important to configure the .env file correctly.
+```
