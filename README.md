@@ -18,31 +18,31 @@ The list of the third-party library are listed on the requirments.txt file; howe
 
 # Quick Usage
 The trained models have been packaged using the Python Setuptools library. Therefore, this component must install the related package by cloning the package, browsing to the main directory, and executing the following commands. 
-
+```
 git clone https://github.com/eclipse-opensmartclide/smartclide-smart-assistant.git
 python3 pip install -r request.txt
 python3 ServDB/src/cli/Apis.py   
 cd /src/TheiaGUI/ & yarn
 cd /src/TheiaGUI/ & yarn theia start --hostname 0.0.0.0 --port 8080
-
+```
 Open http://localhost:8080 in the browser.
 
 # Notebooks
-Notebooks try to demonstrate commands that are provided for data collection and data preprocessing in the notebooks directory.
-
+Notebooks try to demonstrate commands provided for data collection and preprocessing in the notebooks directory.
+```
 !python3 notebooks/2_preprocess/0_2_1_preprocess_java.py  \
         --src_dir <collected-data-path> \
         --des_dir  <preprocess-data-path> 
+```
 
-
-
+```
 !python3  notebooks/2_preprocess/0_2_2_page_to_line_txt.py \
         --src_dir   <preprocess-data-path>    \
         --des_dir  <line-based-data-path> \
         --file_type  "dataset.txt" 
-
+```
 
 ### Theia Interface
-In ServDB, many tasks are required to run in the background independently of the user interface (UI). AI Models is one of these tasks that need to serve requests in real-time and return results. Theia interface is used for GUI, which is an online IDE
+In ServDB, many tasks are required to run in the background independently of the user interface (UI). AI Models are one of these tasks that must serve requests in real-time and return results. Theia interface have used for GUI, which is an online IDE
 that have brought benefits like browser-based accessibility and convenient deployment workspaces. 
 
