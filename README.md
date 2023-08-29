@@ -46,4 +46,3 @@ Notebooks try to demonstrate commands that are provided for data collection and 
 In ServDB, many tasks are required to run in the background independently of the user interface (UI). AI Models is one of these tasks that need to serve requests in real-time and return results. Theia interface is used for GUI, which is an online IDE
 that have brought benefits like browser-based accessibility and convenient deployment workspaces. 
 
-![Screenshot](screenshot.png)
